@@ -57,4 +57,5 @@ def page_not_found(error):
 
 
 def format_date_joined(date):
+    """Format the date to return only month and year date"""
     return "Joined"+" "+date.strftime("%B, %Y")
