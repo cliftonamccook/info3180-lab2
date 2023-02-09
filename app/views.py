@@ -2,6 +2,8 @@ from app import app
 from flask import render_template, request, redirect, url_for, flash
 import datetime
 
+FULL_NAME = "Clifton McCook"
+DATE_JOINED = datetime.date(2023, 2, 8)
 
 ###
 # Routing for your application.
@@ -16,13 +18,13 @@ def home():
 @app.route('/about/')
 def about():
     """Render the website's about page."""
-    return render_template('about.html', name="Clifton McCook")
+    return render_template('about.html', name=FULL_NAME)
 
 
 @app.route('/profile')
 def profile():
     """Render my profile page"""
-    return render_template('profile.html', name="Clifton McCook", date=format_date_joined())
+    return render_template('profile.html', name=FULL_NAME, date=format_date_joined(DATE_JOINED))
 
 
 ###
@@ -54,6 +56,5 @@ def page_not_found(error):
     return render_template('404.html'), 404
 
 
-def format_date_joined():
-    date_joined = datetime.date(2023, 2, 8)
-    return "Joined"+" "+date_joined.strftime("%B, %Y")
+def format_date_joined(date):
+    return "Joined"+" "+date.strftime("%B, %Y")
