@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block main %}
+<div id="card">
+    <div id="intro">
+        <img src="{{ url_for('static', filename='profile_photo.png') }}" alt="profile photo" id="profile_photo">
+        <h2 id="full_name">Clifton McCook</h2>
+        <p id="username">@cmccook</p>
+        <p id="location">Kingston, Jamaica</p>
+        <p id="date_joined">Date</p>
+    </div>
+    <div id="details">
+        <p id="bio">
+            I am a talented and smart young man who loves website design and development. Contact me if you'd like to work together on a new project.
+        </p>
+        <div id="stats">
+            <div id="posts">
+                <div id="posts_count" class="statistic">7</div>
+                <div id="posts_label" class="statistic_label">Posts</div>
+            </div>
+            <div id="following">
+                <div id="following_count" class="statistic">100</div>
+                <div id="following_label" class="statistic_label">Following</div>
+            </div>
+            <div id="followers">
+                <div id="followers_count" class="statistic">250</div>
+                <div id="followers_label" class="statistic_label">Followers</div>
+            </div>
+        </div>
+    </div>
+    <div id="follow">
+        <button>Follow</button>
+    </div>
+</div>
+{% endblock %}
