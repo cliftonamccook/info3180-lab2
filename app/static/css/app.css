@@ -1,3 +1,73 @@
 body {
     padding-top: 5rem;
 }
+
+#card {
+    margin: auto;
+    width: 50%;
+    border: 1px solid gray;
+    border-radius: 20px;
+  }
+
+#intro, #details {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+#stats, #follow {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#profile_photo {
+    margin: auto;
+    width: 40%;
+    border-radius: 50%;
+    padding: 30px;
+}
+
+#intro {
+    background-color: #55995f;
+    padding: none;
+    margin: none;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+#bio {
+    padding-top: 20px;
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+#follow button {
+    margin: 50px;
+    width: 200px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #7ed321;
+    color: white;
+    font-weight: bold;
+    border: none;
+}
+
+.statistic {
+    font-weight: bold;
+    font-size: 20pt;
+}
+
+#stats > div {
+    padding: 20px;
+}
+
+#bio, .statistic_label {
+    color: #8b8b8b;
+}
+
+#intro {
+    color: white;
+    text-shadow: 2px 2px 5px black;
+}
